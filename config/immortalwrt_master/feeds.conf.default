@@ -1,0 +1,3 @@
+src-git qmodem https://github.com/FUjr/QModem.git;main
+src-git store https://github.com/linkease/istore.git;main
+src-git third_party https://github.com/linkease/istore-packages.git;main
