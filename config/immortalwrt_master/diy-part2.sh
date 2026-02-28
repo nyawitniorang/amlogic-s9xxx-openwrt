@@ -53,3 +53,9 @@ git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
 # git apply ../config/patches/{0001*,0002*}.patch --directory=feeds/luci
 #
 # ------------------------------- Other ends -------------------------------
+
+# Fix iStore luci-app-store: APK tidak menerima versi "0.1.32-1"
+# Ubah jadi "0.1.32.1" agar valid (angka bertitik)
+if [ -f "feeds/store/luci/luci-app-store/Makefile" ]; then
+  sed -i -E 's/(PKG_VERSION:=[0-9.]+)-([0-9]+)/\1.\2/' feeds/store/luci/luci-app-store/Makefile
+fi
